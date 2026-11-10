@@ -1,7 +1,7 @@
-python -m venv venv
+python -m venv .venv
 
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-.\venv\Scripts\Activate.ps1
+.\.venv\Scripts\Activate.ps1
 
 deactivate

@@ -7,7 +7,7 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 app.json.ensure_ascii = False
 
-VERSION = "0.4.0"
+VERSION = "0.4.0a"
 BASE_DIR = pathlib.Path(__file__).parent
 
 

@@ -40,9 +40,9 @@ pipeline {
                 runCmd "${env.VPY} -m py_compile app.py deploy.py"       
             }
         }
-        stage('Data Check') {
+        stage('Data Check'){
             steps {
-                rumCmd "${env.VPY} -m pytest -v tests/test_data.py"
+                runCmd "${env.VPY} -m pytest -v tests/test_data.py"
             }
         }
         stage('Test') {       

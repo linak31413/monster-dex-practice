@@ -1,4 +1,5 @@
 def runCmd(String cmd) {
+
     if (isUnix()) {
         sh cmd
     } else {
@@ -36,18 +37,18 @@ pipeline {
         stage('Syntax Check') {       
             steps {            
                 // py_complie app.py   deploy.py <- 문법 적용
-                runCmd "${env.PY} -m py_compile app.py deploy.py"       
+                runCmd "${env.VPY} -m py_compile app.py deploy.py"       
             }
         }
         stage('Test') {       
             steps {            
                 // pytest 실행
-                runCmd "${env.PY} -m pytest -v"
+                runCmd "${env.VPY} -m pytest -v"
             }
         }
         stage('Deploy') {       
             steps {            
-                runCmd "${env.PY} deloy.py"
+                runCmd "${env.VPY} deloy.py"
             }
         }
     }
